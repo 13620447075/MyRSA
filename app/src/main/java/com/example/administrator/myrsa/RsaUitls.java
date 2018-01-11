@@ -149,23 +149,7 @@ public class RsaUitls {
         }
         return bytes;
     }
-    /**
-     * 公钥解密
-     *
-     * @param data      待解密数据
-     * @param publicKey 密钥
-     * @return byte[] 解密数据
-     */
-    public static byte[] decryptByPublicKey(byte[] data, byte[] publicKey) throws Exception {
-        // 得到公钥
-        X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicKey);
-        KeyFactory kf = KeyFactory.getInstance(RSA);
-        PublicKey keyPublic = kf.generatePublic(keySpec);
-        // 数据解密
-        Cipher cipher = Cipher.getInstance(ECB_PKCS1_PADDING);
-        cipher.init(Cipher.DECRYPT_MODE, keyPublic);
-        return cipher.doFinal(data);
-    }
+
     /**
      * 使用私钥进行解密
      */
