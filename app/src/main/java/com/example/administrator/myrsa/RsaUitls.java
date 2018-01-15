@@ -20,7 +20,7 @@ import javax.crypto.Cipher;
 public class RsaUitls {
     public static final String RSA = "RSA";// 非对称加密密钥算法
     public static final String ECB_PKCS1_PADDING = "RSA/ECB/PKCS1Padding";//加密填充方式
-    public static final int DEFAULT_KEY_SIZE = 2048;//秘钥默认长度
+    public static final int DEFAULT_KEY_SIZE = 1024;//秘钥默认长度
     public static final byte[] DEFAULT_SPLIT = "#PART#".getBytes();    // 当要加密的内容超过bufferSize，则采用partSplit进行分块加密
     public static final int DEFAULT_BUFFERSIZE = (DEFAULT_KEY_SIZE / 8) - 11;// 当前秘钥支持加密的最大字节数
     /**
